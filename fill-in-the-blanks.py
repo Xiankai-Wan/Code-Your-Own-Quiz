@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # IPND Stage 2 Final Project
 
 # You've built a Mad-Libs game with some help from Sean.
@@ -16,10 +17,10 @@
 # To help you get started, we've provided a sample paragraph that you can use when testing your code.
 # Your game should consist of 3 or more levels, so you should add your own paragraphs as well!
 
-sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
-adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
-don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
-tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
+# sample = '''A ___1___ is created with the def keyword. You specify the inputs a ___1___ takes by
+# adding ___2___ separated by commas between the parentheses. ___1___s by default return ___3___ if you
+# don't specify the value to return. ___2___ can be standard data types such as string, number, dictionary,
+# tuple, and ___4___ or can be more complicated such as objects and lambda functions.'''
 
 # The answer for ___1___ is 'function'. Can you figure out the others?
 
@@ -34,3 +35,24 @@ tuple, and ___4___ or can be more complicated such as objects and lambda functio
 # How can you adapt that design to work with numbered blanks?
 
 # If you need help, you can sign up for a 1 on 1 coaching appointment: https://calendly.com/ipnd-1-1/20min/
+
+Simple = ["The capital of the United States in","The capital of China in","The capital of Russia in"]
+Medium = ["The capital of the British in","The capital of France in","The capital of Germany in","The capital of Italy in"]
+Hard = ["The capital of the Australia in","The capital of Brazil in","The capital of Japan in","The capital of Egypt in","The capital of Korea in"]
+
+def choose_level():
+    user_level = raw_input("Please choose the game level,There are three levles you can input Simple/Medium/Hard:")
+    if user_level == "Simple":
+        return Simple
+    if user_level == "Medium":
+        return Medium
+    if user_level == "Hard":
+        return Hard
+    else:
+        return "You input was not avilable,Please try again!"
+# print choose_level()
+
+def choose_count():
+    user_count = raw_input("Please choose your HP（Health Points）,There are three value you can input 3/4/5:")
+    return user_count
+# print choose_count()
