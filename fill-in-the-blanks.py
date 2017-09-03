@@ -36,12 +36,13 @@
 
 # If you need help, you can sign up for a 1 on 1 coaching appointment: https://calendly.com/ipnd-1-1/20min/
 
-Simple = ["The capital of the United States in","The capital of China in","The capital of Russia in"]
+Simple = ["The capital of the United States in __","The capital of China in __","The capital of Russia in __"]
 Medium = ["The capital of the British in","The capital of France in","The capital of Germany in","The capital of Italy in"]
 Hard = ["The capital of the Australia in","The capital of Brazil in","The capital of Japan in","The capital of Egypt in","The capital of Korea in"]
 
 def choose_level():
-    user_level = raw_input("Please choose the game level,There are three levles you can input Simple/Medium/Hard:")
+    '''no input and return the ganme level.E.g Simple/Medium/Hard'''
+    user_level = raw_input("Please choose the game level,There are three levles(Simple/Medium/Hard) you can input:")
     if user_level == "Simple":
         return Simple
     if user_level == "Medium":
@@ -49,10 +50,14 @@ def choose_level():
     if user_level == "Hard":
         return Hard
     else:
-        return "You input was not avilable,Please try again!"
-# print choose_level()
+        print "Your input was not avilable,Please try again!"
+
+choose_level()
 
 def choose_count():
+    '''no input and return the game HP.E.g 3/4/5'''
     user_count = raw_input("Please choose your HP（Health Points）,There are three value you can input 3/4/5:")
+
     return user_count
-# print choose_count()
+
+choose_count()
